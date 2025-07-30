@@ -1,0 +1,7 @@
+org\sample\unit_testing_demo\LoginServiceTest.class
+org\sample\unit_testing_demo\MathUtilTest.class
+org\sample\unit_testing_demo\OrderServiceTest.class
+org\sample\unit_testing_demo\StringUtilTest.class
+org\sample\unit_testing_demo\FactorialTest.class
+org\sample\unit_testing_demo\AccountServiceTest.class
+org\sample\unit_testing_demo\StudentServiceTest.class
