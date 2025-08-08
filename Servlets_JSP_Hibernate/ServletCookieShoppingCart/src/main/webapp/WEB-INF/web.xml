@@ -1,0 +1,19 @@
+<web-app xmlns="http://jakarta.ee/xml/ns/jakartaee" version="5.0">
+    <servlet>
+        <servlet-name>AddItems</servlet-name>
+        <servlet-class>com.example.cart.ItemSelectionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddItems</servlet-name>
+        <url-pattern>/addItems</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ViewCart</servlet-name>
+        <servlet-class>com.example.cart.ViewCartServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ViewCart</servlet-name>
+        <url-pattern>/viewCart</url-pattern>
+    </servlet-mapping>
+</web-app>
