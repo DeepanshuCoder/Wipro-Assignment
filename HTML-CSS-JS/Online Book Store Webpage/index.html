@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BookWorld — Online Bookstore</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header class="site-header">
+            <div class="hero">
+                <img src="book.jpg" alt="Stack of books" />
+            </div>
+            <h1>Welcome to BookWorld</h1>
+            <p class="lead">
+                BookWorld is a premier online bookstore. We offer a wide range of books, secure shopping, and fast
+                delivery.
+            </p>
+        </header>
+
+        <main>
+            <section class="categories">
+                <h2>Book Categories</h2>
+                <table class="cat-table" aria-label="Book categories table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Number of Books</th>
+                            <th>Top Author</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Fiction</td>
+                            <td>2,345</td>
+                            <td><a href="#" class="author-link">J.K. Rowling</a></td>
+                        </tr>
+                        <tr>
+                            <td>Non-Fiction</td>
+                            <td>1,789</td>
+                            <td><a href="#" class="author-link">Malcolm Gladwell</a></td>
+                        </tr>
+                        <tr>
+                            <td>Children's</td>
+                            <td>1,234</td>
+                            <td><a href="#" class="author-link">Roald Dahl</a></td>
+                        </tr>
+                        <tr>
+                            <td>Science</td>
+                            <td>980</td>
+                            <td><a href="#" class="author-link">Stephen Hawking</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="two-col">
+                <div class="left-col">
+                    <div class="lists">
+                        <div class="best-sellers">
+                            <h3>Best-Sellers</h3>
+                            <ol>
+                                <li>The Great Gatsby — F. Scott Fitzgerald</li>
+                                <li>To Kill a Mockingbird — Harper Lee</li>
+                                <li>1984 — George Orwell</li>
+                                <li>The Catcher in the Rye — J. D. Salinger</li>
+                                <li>The Hobbit — J.R.R. Tolkien</li>
+                            </ol>
+                        </div>
+
+                        <div class="upcoming">
+                            <h3>Upcoming Releases</h3>
+                            <ul>
+                                <li>The Midnight Library</li>
+                                <li>Project Hail Mary</li>
+                                <li>The Four Winds</li>
+                                <li>Kiara and the Sun</li>
+                                <li>The Lincoln Highway</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <section class="book-preview">
+                        <h3>Book Preview</h3>
+                        <div class="video-wrap">
+                            <iframe src="https://www.youtube.com/embed/UWFrvN88HGo"
+                                title="Peanut Jones and the Illustrated City book trailer" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+
+                        </div>
+                    </section>
+                </div>
+
+                <aside class="right-col">
+                    <div class="signup-card">
+                        <h3>Newsletter Signup</h3>
+                        <p>Subscribe to our BookWorld newsletter.</p>
+
+                        <form id="signupForm">
+                            <label for="name">Name</label>
+                            <input id="name" name="name" type="text" placeholder="Your name" required />
+
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+                            <label for="genre">Favorite Genre</label>
+                            <select id="genre" name="genre">
+                                <option>Fiction</option>
+                                <option>Non-Fiction</option>
+                                <option>Children's</option>
+                                <option>Science</option>
+                            </select>
+
+                            <label for="comments">Comments</label>
+                            <textarea id="comments" name="comments" rows="4"
+                                placeholder="Tell us what you love..."></textarea>
+
+                            <button type="submit" class="btn">Submit</button>
+                            <div id="formMessage" class="form-message" aria-live="polite"></div>
+                        </form>
+                    </div>
+
+                    <div class="contact-card">
+                        <h4>Contact Info</h4>
+                        <address>
+                            BookWorld, 123 Book St,<br />
+                            Reading City, RC 560001<br />
+                        </address>
+                        <p>Phone: <a href="tel:+919354479334">+91 9354479334</a></p>
+                        <p>Email: <a href="mailto:deepu@bookworld.co.in">deepu@bookworld.co.in</a></p>
+                        <p><a href="#top">Back to top</a></p>
+                    </div>
+                </aside>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>&copy; <span id="year"></span> BookWorld — All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
