@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Online Grocery Order</title>
+  <style>
+    body{font-family:Segoe UI, Roboto, Helvetica, Arial, sans-serif; background:#f7f7f9; color:#222; padding:20px}
+    .container{max-width:780px;margin:0 auto;background:#fff;padding:20px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+    h2{text-align:center;margin-top:0}
+    fieldset{border:1px solid #ddd;padding:14px;border-radius:6px;margin-bottom:12px}
+    legend{font-weight:600;padding:0 6px}
+    label{display:block;margin:8px 0 4px}
+    input[type=text], input[type=email], input[type=tel], input[type=date], input[type=time], input[type=number], textarea{width:100%;padding:8px;border:1px solid #ccc;border-radius:4px;box-sizing:border-box}
+    .inline{display:inline-block;margin-right:12px}
+    .items-row label{display:inline-block;margin-right:12px}
+    .buttons{display:flex;gap:10px;justify-content:flex-end;margin-top:10px}
+    button{padding:8px 14px;border-radius:6px;border:0;cursor:pointer}
+    button[type=submit]{background:#1976d2;color:#fff}
+    button[type=reset]{background:#e0e0e0}
+    .note{font-size:0.9rem;color:#555}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Online Grocery Order</h2>
+
+    <form id="groceryForm" action="order.php" method="post">
+
+      <fieldset>
+        <legend>Customer Details</legend>
+
+        <label for="fullname">Full Name *</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required autofocus>
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+        <label for="mobile">Mobile Number</label>
+        <input type="tel" id="mobile" name="mobile" placeholder="10 digit mobile number" pattern="[0-9]{10}" maxlength="10" title="Enter 10 digit mobile number">
+
+        <label for="address">Delivery Address *</label>
+        <textarea id="address" name="address" rows="3" placeholder="House no., street, city, state, pincode" required></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Order Details</legend>
+
+        <label>Grocery Items (choose one or more) *</label>
+        <div class="items-row">
+          <label><input type="checkbox" name="items[]" value="Rice"> Rice</label>
+          <label><input type="checkbox" name="items[]" value="Milk"> Milk</label>
+          <label><input type="checkbox" name="items[]" value="Bread"> Bread</label>
+          <label><input type="checkbox" name="items[]" value="Eggs"> Eggs</label>
+          <label><input type="checkbox" name="items[]" value="Sugar"> Sugar</label>
+        </div>
+
+        <label for="quantity">Quantity (per selected item) *</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" required>
+
+        <label for="deliveryDate">Delivery Date *</label>
+        <input type="date" id="deliveryDate" name="deliveryDate" required>
+
+        <label for="deliveryTime">Preferred Delivery Time</label>
+        <input type="time" id="deliveryTime" name="deliveryTime">
+
+        <label>Payment Method *</label>
+        <label class="inline"><input type="radio" name="payment" value="Cash on Delivery" required> Cash on Delivery</label>
+        <label class="inline"><input type="radio" name="payment" value="UPI"> UPI</label>
+        <label class="inline"><input type="radio" name="payment" value="Card"> Card</label>
+
+      </fieldset>
+
+      <label for="instructions">Special Instructions (optional)</label>
+      <textarea id="instructions" name="instructions" rows="2" placeholder="Leave it at the door, call on arrival, etc."></textarea>
+
+      <p>
+        <label><input type="checkbox" name="confirm" value="1" required> I confirm my order</label>
+      </p>
+
+      <div class="buttons">
+        <button type="reset">Reset</button>
+        <button type="submit">Submit Order</button>
+      </div>
+    </form>
+
+    <p class="note">This form posts to <code>order.php</code> using the <code>POST</code> method.</p>
+  </div>
+
+  <script>
+    (function(){
+      var dateInput = document.getElementById('deliveryDate');
+      if(dateInput){
+        var today = new Date();
+        var yyyy = today.getFullYear();
+        var mm = String(today.getMonth()+1).padStart(2,'0');
+        var dd = String(today.getDate()).padStart(2,'0');
+        dateInput.min = yyyy + '-' + mm + '-' + dd;
+      }
+
+      var form = document.getElementById('groceryForm');
+      form.addEventListener('submit', function(e){
+        var checked = document.querySelectorAll('input[name="items[]"]:checked');
+        if(checked.length === 0){
+          e.preventDefault();
+          alert('Please select at least one grocery item.');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

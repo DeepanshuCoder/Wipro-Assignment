@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Store Catalog</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            color: #1d1d1d;
+        }
+
+        header p {
+            color: #555;
+            font-size: 1rem;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+        }
+
+        .card h3 {
+            margin: 10px 0 5px;
+            font-size: 1.2rem;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .price {
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 16px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            .products {
+                padding: 10px;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Furniture Store Catalog</h1>
+        <p>Find the best furniture for your home</p>
+    </header>
+
+    <section class="products">
+        <div class="card">
+            <img src="sofa.jpeg" alt="Sofa" style="background-color: #f0f9ff;">
+            <h3>Sofa</h3>
+            <p>Comfortable and stylish sofa</p>
+            <div class="price">$499</div>
+            <a href="#" class="btn">Buy Now</a>
+        </div>
+
+        <div class="card" style="background-color: #f0f9ff;">
+            <img src="dining-table.jpeg" alt="Dining Table">
+            <h3>Dining Table</h3>
+            <p>Wooden dining table</p>
+            <div class="price">$299</div>
+            <a href="#" class="btn">Buy Now</a>
+        </div>
+
+        <div class="card">
+            <img src="chair.jpeg" alt="Chair" style="height: 250px;">
+            <h3 style="color: #e63946;">Chair</h3>
+            <p>Modern chair for any room</p>
+            <div class="price">$149</div>
+            <a href="#" class="btn" style="background-color: black;">Buy Now</a>
+        </div>
+    </section>
+
+</body>
+</html>

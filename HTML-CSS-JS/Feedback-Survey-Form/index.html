@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Website Feedback Survey</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header class="site-header">
+            <div class="header-top">
+                <div>
+                    <h1>Website Feedback Survey</h1>
+                    <p class="lead">We value your opinion. Please take a minute to share your thoughts.</p>
+                </div>
+                <img src="feedback.png" alt="Illustration of people giving feedback" class="hero-img" />
+            </div>
+
+            <nav aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <form id="surveyForm" action="#" method="post">
+
+                <section aria-labelledby="personal-info">
+                    <h2 id="personal-info">Personal Info</h2>
+
+                    <div class="form-row">
+                        <label for="fullName">Full Name <span class="required">*</span></label>
+                        <input type="text" id="fullName" name="fullName" required />
+                    </div>
+
+                    <div class="form-row">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+
+                    <div class="form-row">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" min="10" max="100" />
+                    </div>
+                </section>
+
+                <section aria-labelledby="rating">
+                    <h2 id="rating">Website Rating</h2>
+
+                    <div class="form-row range-row">
+                        <label for="designRating">Rate website design: <span id="designValue"
+                                class="value">5</span></label>
+                        <input type="range" id="designRating" name="designRating" min="1" max="10" value="5"
+                            oninput="document.getElementById('designValue').textContent = this.value" />
+                    </div>
+
+                    <fieldset class="form-row">
+                        <legend>Rate content quality</legend>
+                        <label><input type="radio" name="contentQuality" value="Excellent" required /> Excellent</label>
+                        <label><input type="radio" name="contentQuality" value="Good" /> Good</label>
+                        <label><input type="radio" name="contentQuality" value="Average" /> Average</label>
+                        <label><input type="radio" name="contentQuality" value="Poor" /> Poor</label>
+                    </fieldset>
+
+                    <div class="form-row">
+                        <label for="mostVisited">Most visited page</label>
+                        <select id="mostVisited" name="mostVisited">
+                            <option value="Home">Home</option>
+                            <option value="Blog">Blog</option>
+                            <option value="Products">Products</option>
+                            <option value="Contact">Contact</option>
+                        </select>
+                    </div>
+                </section>
+
+                <section aria-labelledby="suggestions">
+                    <h2 id="suggestions">Suggestions</h2>
+
+                    <div class="form-row">
+                        <label for="comments">Comments / Suggestions</label>
+                        <textarea id="comments" name="comments" rows="5"
+                            placeholder="Write any suggestions..."></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <label class="checkbox-label"><input type="checkbox" id="contactOk" name="contactOk" /> I agree
+                            to be contacted regarding my feedback</label>
+                    </div>
+                </section>
+
+                <div class="form-actions">
+                    <button type="submit">Submit Feedback</button>
+                    <button type="reset" class="secondary">Reset</button>
+                </div>
+
+            </form>
+        </main>
+
+        <aside class="side-note" aria-label="Motivational note">
+            <p>Your feedback helps us improve our website experience for everyone.</p>
+        </aside>
+
+        <footer class="site-footer">
+            <p>© 2025 Website Survey</p>
+        </footer>
+    </div>
+
+    <script>
+        (function () {
+            const form = document.getElementById('surveyForm');
+            form.addEventListener('submit', function (e) {
+                if (!form.checkValidity()) {
+                    e.preventDefault();
+                    form.classList.add('was-validated');
+                    const firstInvalid = form.querySelector(':invalid');
+                    if (firstInvalid) firstInvalid.focus();
+                }
+            });
+        })();
+    </script>
+</body>
+
+</html>

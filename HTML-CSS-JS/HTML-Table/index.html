@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Purchase Orders</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>Purchase Orders</h1>
+
+        <div class="card" role="region" aria-labelledby="tableTitle">
+            <table aria-describedby="tableTitle">
+                <colgroup>
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                </colgroup>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Order #</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Customer</th>
+                        <th scope="col">Items</th>
+                        <th scope="col">Qty</th>
+                        <th scope="col" class="currency">Unit Price</th>
+                        <th scope="col" class="currency">Line Total</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td data-label="Order #">2001</td>
+                        <td data-label="Date">2025-07-29</td>
+                        <td data-label="Customer">Asha Sharma</td>
+                        <td class="items" data-label="Items">Basmati Rice (5 kg)</td>
+                        <td class="qty" data-label="Qty">1</td>
+                        <td class="currency" data-label="Unit Price">$24.00</td>
+                        <td class="currency" data-label="Line Total">$24.00</td>
+                        <td class="status" data-label="Status">Shipped</td>
+                    </tr>
+
+                    <tr>
+                        <td data-label="Order #">2002</td>
+                        <td data-label="Date">2025-07-30</td>
+                        <td data-label="Customer">Raman &amp; Co.</td>
+                        <td class="items" data-label="Items">Brown Bread</td>
+                        <td class="qty" data-label="Qty">3</td>
+                        <td class="currency" data-label="Unit Price">$2.25</td>
+                        <td class="currency" data-label="Line Total">$6.75</td>
+                        <td class="status" data-label="Status">Processing</td>
+                    </tr>
+
+                    <tr>
+                        <td data-label="Order #">2003</td>
+                        <td data-label="Date">2025-08-01</td>
+                        <td data-label="Customer">Priya Patel</td>
+                        <td class="items" data-label="Items">Assorted Snacks Box</td>
+                        <td class="qty" data-label="Qty">1</td>
+                        <td class="currency" data-label="Unit Price">$18.50</td>
+                        <td class="currency" data-label="Line Total">$18.50</td>
+                        <td class="status" data-label="Status">Delivered</td>
+                    </tr>
+
+                    <tr>
+                        <td data-label="Order #">2004</td>
+                        <td data-label="Date">2025-08-02</td>
+                        <td data-label="Customer">Vijay Enterprises</td>
+                        <td class="items" data-label="Items">Sugar (2 kg)</td>
+                        <td class="qty" data-label="Qty">2</td>
+                        <td class="currency" data-label="Unit Price">$1.80</td>
+                        <td class="currency" data-label="Line Total">$3.60</td>
+                        <td class="status" data-label="Status">Cancelled</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="4" class="total-label">Grand Total</td>
+                        <td></td>
+                        <td class="currency">$59.85</td>
+                        <td class="currency">$59.85</td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

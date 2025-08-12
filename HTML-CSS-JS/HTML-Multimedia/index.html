@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Multimedia Lab</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>HTML5 Multimedia Lab</h1>
+            <p>This page demonstrates embedding video, audio, PDF, iframe, and inline SVG.</p>
+        </header>
+
+        <section>
+            <h2>YouTube Video</h2>
+            <div class="media-box">
+                <iframe src="https://www.youtube.com/embed/aqz-KE-bpKQ" title="Big Buck Bunny - Blender Foundation"
+                    allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section>
+            <h2>Audio</h2>
+            <div class="media-box">
+                <audio controls>
+                    <source src="audio.mp3" type="audio/mpeg">
+                    Your browser does not support audio.
+                </audio>
+            </div>
+        </section>
+
+        <section>
+            <h2>PDF Document</h2>
+            <div class="media-box">
+                <embed src="sample.pdf" type="application/pdf">
+            </div>
+        </section>
+
+        <section>
+            <h2>Iframe Page</h2>
+            <div class="media-box">
+                <iframe src="demo.html" title="Iframe Example"></iframe>
+            </div>
+        </section>
+
+        <section>
+            <h2>Inline SVG</h2>
+            <div class="media-box svg-box">
+                <svg width="150" height="150" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="75" cy="75" r="70" fill="#f4f4f4" stroke="#333" stroke-width="4" />
+                    <circle cx="75" cy="75" r="50" fill="orange" opacity="0.8" />
+                    <rect x="40" y="40" width="70" height="70" fill="skyblue" opacity="0.6" />
+                    <polygon points="75,25 100,125 50,125" fill="limegreen" opacity="0.7" />
+                    <text x="75" y="80" font-size="16" text-anchor="middle" fill="#333" font-family="Arial">
+                        SVG Demo
+                    </text>
+                </svg>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>

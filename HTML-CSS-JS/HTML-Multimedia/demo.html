@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe Demo Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f9f9f9, #dff0ff);
+            text-align: center;
+            padding: 30px;
+            color: #333;
+        }
+
+        h1 {
+            color: #0066cc;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #004d99;
+        }
+
+        p {
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Welcome to the Iframe Demo</h1>
+    <p>This is a small HTML page with internal CSS and JS, displayed inside the iframe.</p>
+
+    <button onclick="changeMessage()">Click Me</button>
+    <p id="message">Hello there! 👋</p>
+
+    <script>
+        function changeMessage() {
+            const msg = document.getElementById("message");
+            msg.textContent = "You clicked the button! 🎉";
+            msg.style.color = "#e60000";
+        }
+    </script>
+
+</body>
+
+</html>
