@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equality & Inequality Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin-top: 15px;
+        }
+
+        th,
+        td {
+            border: 1px solid #333;
+            padding: 8px 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        caption {
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Equality & Inequality Checker</h2>
+    <script>
+        let firstValue = prompt("Enter the first value:");
+        let secondValue = prompt("Enter the second value:");
+
+        let typeFirst = typeof firstValue;
+        let typeSecond = typeof secondValue;
+
+        let numFirst = Number(firstValue);
+        let numSecond = Number(secondValue);
+
+        let results = [
+            {
+                operator: "==",
+                result: firstValue == secondValue,
+                explanation: "Equality ignores type"
+            },
+            {
+                operator: "===",
+                result: firstValue === secondValue,
+                explanation: "Strict equality checks type too"
+            },
+            {
+                operator: "!=",
+                result: firstValue != secondValue,
+                explanation: "Values considered equal means this is false"
+            },
+            {
+                operator: "!==",
+                result: firstValue !== secondValue,
+                explanation: "Strict inequality because types differ"
+            }
+        ];
+
+        document.write(`<p><b>First Value:</b> ${firstValue} (${typeFirst})<br>`);
+        document.write(`<b>Second Value:</b> ${secondValue} (${typeSecond})</p>`);
+
+        document.write(`<table>
+            <caption>Comparison Results</caption>
+            <tr>
+                <th>Operator</th>
+                <th>Result</th>
+                <th>Explanation</th>
+            </tr>
+        `);
+
+        results.forEach(row => {
+            document.write(`
+                <tr>
+                    <td>${row.operator}</td>
+                    <td>${row.result}</td>
+                    <td>${row.explanation}</td>
+                </tr>
+            `);
+        });
+
+        document.write(`</table>`);
+        document.write(`<br><b>Type Conversion Demonstration:</b><br>`);
+        document.write(`First Value as Number: ${numFirst} (${typeof numFirst})<br>`);
+        document.write(`Second Value as Number: ${numSecond} (${typeof numSecond})<br>`);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Booking Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .card {
+            border-radius: 15px;
+        }
+
+        #summary {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8 col-sm-10">
+                <div class="card shadow-lg p-4">
+                    <h2 class="text-center mb-4">Tour Booking Form</h2>
+                    <form id="bookingForm">
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="destination" class="form-label">Destination</label>
+                            <select class="form-select" id="destination" required>
+                                <option value="">-- Select Destination --</option>
+                                <option value="Ooty">Ooty</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Manali">Manali</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="days" class="form-label">Number of Days</label>
+                            <input type="number" class="form-control" id="days" min="1" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="travelers" class="form-label">Number of Travelers</label>
+                            <input type="number" class="form-control" id="travelers" min="1" required>
+                        </div>
+                        <div class="d-grid">
+                            <button type="button" class="btn btn-primary" onclick="bookNow()">Book Now</button>
+                        </div>
+                    </form>
+
+                    <div id="summary" class="alert alert-success">
+                        <h5>Booking Summary</h5>
+                        <p id="summaryText"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function bookNow() {
+            let name = document.getElementById("fullName").value;
+            let email = document.getElementById("email").value;
+            let destination = document.getElementById("destination").value;
+            let days = parseInt(document.getElementById("days").value);
+            let travelers = parseInt(document.getElementById("travelers").value);
+            let prices = {
+                "Ooty": 2000,
+                "Goa": 3000,
+                "Manali": 4000
+            };
+            let totalPrice = prices[destination] * days * travelers;
+            let summaryText = `
+        Name: ${name} <br>
+        Email: ${email} <br>
+        Destination: ${destination} <br>
+        Days: ${days} <br>
+        Travelers: ${travelers} <br>
+        Total Price: ₹${totalPrice}
+    `;
+            document.getElementById("summaryText").innerHTML = summaryText;
+            document.getElementById("summary").style.display = "block";
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
