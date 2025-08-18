@@ -8,6 +8,13 @@ import JuiceList from "./components/juice/JuiceList";
 import Restaurant from "./components/restaurant/Restaurant";
 import TempleList from "./components/temple/TempleList";
 import TailorShop from "./components/tailor/TailorShop";
+import Fruits from "./components1/fruits/Fruits";
+import TelevisionManager from "./components1/television/Television";
+import MarriageForm from "./components1/marriage/MarriageForm";
+import AccessoriesForm from "./components1/accessories/AccessoriesForm";
+import BakingForm from "./components1/baking/BakingItem";
+import ParentApp from "./components1/flight/FlightBookingForm";
+import MovieForm from "./components1/movie/MovieForm";
 
 function GroceryLab() {
   const items = ["Rice", "Wheat", "Sugar", "Milk", "Oil"];
@@ -100,6 +107,69 @@ function TailorLab() {
   )
 }
 
+function FruitsLab() {
+  return (
+    <div>
+      <h1>Fruits</h1>
+      <Fruits />
+    </div>
+  );
+}
+
+function TelevisionLab() {
+  return (
+    <div>
+      <h1>Television</h1>
+      <TelevisionManager />
+    </div>
+  );
+}
+
+function MarriageLab() {
+  return (
+    <div>
+      <h1>Marriage Form</h1>
+      <MarriageForm />
+    </div>
+  );
+}
+
+function AccessoriesLab() {
+  return (
+    <div>
+      <h1>Accessories Form</h1>
+      <AccessoriesForm />
+    </div>
+  );
+}
+
+function BakingLab() {
+  return (
+    <div>
+      <h1>Baking Items</h1>
+      <BakingForm />
+    </div>
+  );
+}
+
+function FlightLab() {
+  return (
+    <div>
+      <h1>Flight Booking Form</h1>
+      <ParentApp />
+    </div>
+  );
+}
+
+function MovieLab() {
+  return (
+    <div>
+      <h1>Movie Form</h1>
+      <MovieForm />
+    </div>
+  );
+}
+
 export default function App() {
   return (
     <div>
@@ -122,6 +192,20 @@ export default function App() {
       <TempleLab />
       <hr />
       <TailorLab />
+      <hr />
+      <FruitsLab />
+      <hr />
+      <TelevisionLab />
+      <hr />
+      <MarriageLab />
+      <hr />
+      <AccessoriesLab />
+      <hr />
+      <BakingLab />
+      <hr />
+      <FlightLab />
+      <hr />
+      <MovieLab />
     </div>
   );
 }
