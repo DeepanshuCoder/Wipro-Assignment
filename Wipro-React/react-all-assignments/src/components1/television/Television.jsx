@@ -33,7 +33,7 @@ class TelevisionManager extends React.Component {
                 />
                 <button onClick={this.addModel}>Add</button>
 
-                {/* Passes al the models to the child */}
+                {/* Passes all the models to the child */}
                 <TelevisionList models={this.state.models} />
             </div>
         );

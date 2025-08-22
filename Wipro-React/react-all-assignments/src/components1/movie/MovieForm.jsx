@@ -36,7 +36,7 @@ class MovieForm extends Component {
     }
   };
 
-  // handle form submit with array of object
+  // handle form submit with spread operator & array of object
   handleSubmit = e => {
     e.preventDefault();
     const { title, director, year, genre, rating, desc, platforms } = this.state;

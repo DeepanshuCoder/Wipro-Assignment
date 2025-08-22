@@ -2,7 +2,7 @@ import React from "react";
 
 class Car extends React.Component {
     render() {
-        const { brand, model, color, year } = this.props;
+        const { brand, model, color, year } = this.props; // oject destructuring
         return (
             <div>
                 <h2>Car Details</h2>

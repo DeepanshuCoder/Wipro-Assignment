@@ -39,7 +39,8 @@ class Fruits extends React.Component {
   }
 }
 
-//Here I'm displays the fruits
+//Here I'm displays the fruits 
+// Using the {f} for each fruits and takes its index.
 function FruitList({ fruits }) {
   return (
     <ul>

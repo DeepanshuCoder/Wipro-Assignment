@@ -15,6 +15,12 @@ import AccessoriesForm from "./components1/accessories/AccessoriesForm";
 import BakingForm from "./components1/baking/BakingItem";
 import ParentApp from "./components1/flight/FlightBookingForm";
 import MovieForm from "./components1/movie/MovieForm";
+import ElectronicMain from "./components2/electronicProductDetails/ElectronicMain";
+import FurnitureMain from "./components2/furnitureStore/FurnitureMain";
+import FestivalApp from "./components2/festival/FestivalApp";
+import RestaurantApp from "./components2/restaurantRegistration/RestaurantMain";
+import CommunicationApp from "./components2/communication/Communication";
+
 
 function GroceryLab() {
   const items = ["Rice", "Wheat", "Sugar", "Milk", "Oil"];
@@ -170,6 +176,50 @@ function MovieLab() {
   );
 }
 
+function ElectronicProductLab() {
+  return (
+    <div>
+      <h1>Electronic Product Details</h1>
+      <ElectronicMain />
+    </div>
+  );
+}
+
+function FurnitureStoreLab() {
+  return (
+    <div>
+      <h1>Furniture Store</h1>
+      <FurnitureMain />
+    </div>
+  );
+}
+
+function FestivalLab() {
+  return (
+    <div>
+      <h1>Festival React App</h1>
+      <FestivalApp />
+    </div>
+  );
+}
+
+function RestaurantFormLab() {
+  return (
+    <div>
+      <RestaurantApp />
+    </div>
+  );
+}
+
+function CommunicationLab() {
+  return (
+    <div>
+      <CommunicationApp />
+    </div>
+  );
+}
+
+
 export default function App() {
   return (
     <div>
@@ -206,6 +256,16 @@ export default function App() {
       <FlightLab />
       <hr />
       <MovieLab />
+      <hr />
+      <ElectronicProductLab />
+      <hr />
+      <FurnitureStoreLab />
+      <hr />
+      <FestivalLab />
+      <hr />
+      <RestaurantFormLab />
+      <hr />
+      <CommunicationLab />
     </div>
   );
 }
