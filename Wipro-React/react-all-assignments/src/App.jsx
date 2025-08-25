@@ -20,6 +20,9 @@ import FurnitureMain from "./components2/furnitureStore/FurnitureMain";
 import FestivalApp from "./components2/festival/FestivalApp";
 import RestaurantApp from "./components2/restaurantRegistration/RestaurantMain";
 import CommunicationApp from "./components2/communication/Communication";
+import ChessTournamentForm from "./components3/chessTournament/ChessTournamentForm";
+import HockeyRegistrationForm from "./components3/hockeyTournament/HockeyTournamentForm";
+import TailoringInventory from "./components4/tailoring/TailoringInventory";
 
 
 function GroceryLab() {
@@ -219,6 +222,29 @@ function CommunicationLab() {
   );
 }
 
+function ChessTournamentLab() {
+  return (
+    <div>
+      <ChessTournamentForm />
+    </div>
+  );
+}
+
+function HockeyTournamentLab() {
+  return (
+    <div>
+      <HockeyRegistrationForm />
+    </div>
+  );
+}
+
+function TailoringLab() {
+  return (
+    <div>
+      <TailoringInventory />
+    </div>
+  );
+}
 
 export default function App() {
   return (
@@ -266,6 +292,12 @@ export default function App() {
       <RestaurantFormLab />
       <hr />
       <CommunicationLab />
+      <hr />
+      <ChessTournamentLab />
+      <hr />
+      <HockeyTournamentLab />
+      <hr />
+      <TailorLab />
     </div>
   );
 }
