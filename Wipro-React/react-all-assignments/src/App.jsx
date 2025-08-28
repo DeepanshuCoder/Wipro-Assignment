@@ -23,6 +23,7 @@ import CommunicationApp from "./components2/communication/Communication";
 import ChessTournamentForm from "./components3/chessTournament/ChessTournamentForm";
 import HockeyRegistrationForm from "./components3/hockeyTournament/HockeyTournamentForm";
 import TailoringInventory from "./components4/tailoring/TailoringInventory";
+import App1 from "./App1";
 
 
 function GroceryLab() {
@@ -246,6 +247,14 @@ function TailoringLab() {
   );
 }
 
+function HOCLab() {
+  return (
+    <div>
+      <App1 />
+    </div>
+  );
+}
+
 export default function App() {
   return (
     <div>
@@ -297,7 +306,9 @@ export default function App() {
       <hr />
       <HockeyTournamentLab />
       <hr />
-      <TailorLab />
+      <TailoringLab />
+      <hr />
+      <HOCLab />
     </div>
   );
 }
